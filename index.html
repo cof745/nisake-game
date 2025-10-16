@@ -43,23 +43,49 @@
             line-height: 1.8;
             margin-bottom: 40px;
         }
-        .link {
-            display: inline-block;
+        .links-container {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
             margin-top: 20px;
+        }
+        .link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             padding: 12px 30px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-decoration: none;
             border-radius: 25px;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         .link:hover {
             transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        .link-googleplay {
+            background: linear-gradient(135deg, #01875f 0%, #00c176 100%);
+        }
+        .link-x {
+            background: linear-gradient(135deg, #000000 0%, #14171a 100%);
         }
         footer {
             margin-top: 60px;
             color: #999;
             font-size: 0.9em;
+        }
+        @media (max-width: 480px) {
+            .links-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .link {
+                width: 100%;
+                max-width: 280px;
+            }
         }
     </style>
 </head>
@@ -72,11 +98,16 @@
             シンプルで使いやすいBGMアプリを中心に、<br>
             毎日をより豊かにする音楽体験をお届けしています。
         </p>
-        <a href="https://play.google.com/store/apps/dev?id=6719160921059869044" class="link">
-            Google Play で見る
-        </a>
+        <div class="links-container">
+            <a href="https://play.google.com/store/apps/dev?id=6719160921059869044" class="link link-googleplay">
+                📱 Google Play で見る
+            </a>
+            <a href="https://x.com/NISAKE_GAME" class="link link-x">
+                𝕏 公式アカウント
+            </a>
+        </div>
         <footer>
-            <p>&copy; 2024 NISAKE GAME. All rights reserved.</p>
+            <p>&copy; 2025 NISAKE GAME. All rights reserved.</p>
         </footer>
     </div>
 </body>
