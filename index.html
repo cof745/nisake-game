@@ -72,13 +72,41 @@
         .link-x {
             background: linear-gradient(135deg, #000000 0%, #14171a 100%);
         }
+        .support-section {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+        .support-label {
+            color: #888;
+            font-size: 0.95em;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .support-links {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .link-sponsor {
+            background: linear-gradient(135deg, #EA4AAA 0%, #ff6bb5 100%);
+            font-size: 0.95em;
+            padding: 10px 24px;
+        }
+        .link-bmac {
+            background: linear-gradient(135deg, #FFDD00 0%, #FFC107 100%);
+            color: #333 !important;
+            font-size: 0.95em;
+            padding: 10px 24px;
+        }
         footer {
             margin-top: 60px;
             color: #999;
             font-size: 0.9em;
         }
         @media (max-width: 480px) {
-            .links-container {
+            .links-container, .support-links {
                 flex-direction: column;
                 align-items: center;
             }
@@ -105,6 +133,20 @@
             <a href="https://x.com/NISAKE_GAME" class="link link-x">
                 𝕏 公式アカウント
             </a>
+        </div>
+        <div class="support-section">
+            <p class="support-label">
+                アプリを気に入っていただけたら、<br>
+                開発の応援も歓迎です 💗
+            </p>
+            <div class="support-links">
+                <a href="https://github.com/sponsors/nisake" class="link link-sponsor">
+                    ♡ GitHub Sponsors
+                </a>
+                <a href="https://buymeacoffee.com/nisake" class="link link-bmac">
+                    ☕ Buy Me a Coffee
+                </a>
+            </div>
         </div>
         <footer>
             <p>&copy; 2025 NISAKE GAME. All rights reserved.</p>
